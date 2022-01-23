@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Result</title>
+</head>
+<body>
+	<h3 style="color: #F00;">
+		あなたの正解数は<label th:text="${numOfCorrectAnswer}"></label>問です。
+	</h3>
+	<br>
+	<form method = "get" th:action = "@{/toTOP}">
+	<button>TOPに戻る</button>
+	</form>
+</body>
+</html>

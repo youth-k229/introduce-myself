@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Question</title>
+</head>
+<body>
+	問
+	<label th:text="${num}"></label>
+	<form method="post" th:action="@{/toQuestion}" th:object="${form}">
+		<p th:text="${q.statement}"></p>
+		<input type="radio" th:field="*{answer}" value="A"><label
+			th:text="${q.A}"></label><br> <input type="radio"
+			th:field="*{answer}" value="B"><label th:text="${q.B}"></label><br>
+		<input type="radio" th:field="*{answer}" value="C"><label
+			th:text="${q.C}"></label><br> <input type="radio"
+			th:field="*{answer}" value="D"><label th:text="${q.D}"></label><br>
+
+
+		<button>Next</button>
+	</form>
+	<br>
+	<form method="get" th:action="@{/toTOP}">
+		<button>TOPに戻る</button>
+	</form>
+
+	<h3 style="color: #F00;">
+		現在の正解数は<label th:text="${numOfCorrectAnswer}"></label>問です。
+	</h3>
+
+</body>
+</html>
